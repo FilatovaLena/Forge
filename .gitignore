@@ -1,0 +1,8 @@
+data/
+test-results/
+node_modules/
+.env
+dist/
+.local/
+.sites-runtime/
+.wrangler/
