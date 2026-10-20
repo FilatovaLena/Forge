@@ -1,0 +1,24 @@
+{
+  "name": "forge",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test tests/api.test.mjs",
+    "test:browser": "node tests/browser.mjs",
+    "build": "node scripts/build-hosted.mjs",
+    "db:generate": "drizzle-kit generate",
+    "test:hosted": "node --test tests/hosted.test.mjs",
+    "test:browser:hosted": "node scripts/test-browser-hosted.mjs",
+    "preview:hosted": "node scripts/preview-hosted.mjs"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1",
+    "drizzle-kit": "0.31.4",
+    "drizzle-orm": "0.44.5"
+  }
+}
