@@ -9,7 +9,7 @@
     "test:browser": "node tests/browser.mjs",
     "build": "node scripts/build-hosted.mjs",
     "db:generate": "drizzle-kit generate",
-    "test:hosted": "node --test tests/hosted.test.mjs",
+    "test:hosted": "node --test tests/hosted*.test.mjs",
     "test:browser:hosted": "node scripts/test-browser-hosted.mjs",
     "preview:hosted": "node scripts/preview-hosted.mjs"
   },

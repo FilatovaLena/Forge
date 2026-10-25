@@ -33,3 +33,7 @@ No original-site migration, email delivery, real browser ChatGPT sign-in, load t
 ## Hosted build checks — passed
 
 The same 12 browser checks also passed against the bundled Worker, using the loopback preview adapter to simulate two independent ChatGPT identities. Additional Worker tests verified D1-style queries, unauthenticated rejection, duplicate requests, self-interest rejection, owner-only acceptance/deletion, accepted-only messages, conversation privacy, cross-origin rejection, MCP discovery and caller-bound MCP reads. Local adapters do not verify the external ChatGPT login service.
+
+## Messaging tools update
+
+Added `forge_get_messages` and `forge_send_message` using the existing accepted-match message API. Isolated Worker tests verify two-way messaging and persisted message receipts, rejection before match acceptance, rejection for anonymous and unrelated users, missing conversations, blank/oversized bodies, and attempts to override the sender. No real-user messages are sent by these tests.

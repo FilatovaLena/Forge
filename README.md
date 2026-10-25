@@ -73,7 +73,7 @@ This runs the same 12 browser checks against the hosted Worker implementation wi
 
 ## Codex integration
 
-The hosted Worker exposes `/mcp` with six tools: read your profile, list projects, list interests, create your project, update your profile and delete your project. Publishing the Site with the MCP capability provisions a personal plugin. Connect that plugin in ChatGPT/Codex to use the tools under your signed-in identity. Tools enforce the same ownership checks as the UI. No tool impersonates another user. Only delete controlled test projects or projects the user explicitly requests to delete.
+The hosted Worker exposes `/mcp` with eight tools: read your profile, list projects, list interests, create your project, update your profile, delete your project, read match messages and send a match message. Publishing the Site with the MCP capability provisions a personal plugin. Connect that plugin in ChatGPT/Codex to use the tools under your signed-in identity. Tools enforce the same ownership checks as the UI. No tool impersonates another user. `forge_get_messages` and `forge_send_message` require the `interest_id` of an accepted match. Identify the correct project and participant using `forge_list_interests` first. The signed-in user must be one of the two conversation participants. Reads and sends are denied for pending matches and unrelated users. Sends return a saved message ID; do not retry a successful send. Only delete controlled test projects or projects the user explicitly requests to delete.
 
 ## GitHub and CI
 
